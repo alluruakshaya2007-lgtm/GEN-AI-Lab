@@ -1,42 +1,34 @@
-Logging Tokens, Latency and Cost for Every Gemini API Call
+📌 Project Overview
 
+This project demonstrates how to monitor Large Language Model (LLM) API usage by tracking token consumption, response latency, estimated cost, and API request status.
 
+The objective of this practical is to integrate the Google Gemini API with MongoDB using Python and store API monitoring information for every request.
 
-Project Description
+The experiment analyzes successful and failed API attempts, retrieves stored records, calculates API usage statistics, and monitors token consumption and estimated costs.
 
-This project demonstrates how to monitor Large Language Model (LLM) API usage by logging token consumption, response latency, estimated 
+🎯 Objectives
 
-API cost, and request status.
-
-Google Gemini API is used to generate responses, while MongoDB stores the API usage records for monitoring and analysis.
-
-Python libraries such as Pandas and Matplotlib are used to display, analyze, and visualize the collected monitoring data.
-
-
-
-
-
-Objectives
+Understand the importance of monitoring Large Language Model applications.
 
 Connect to the Google Gemini API using Python.
 
-Generate responses using a Gemini model.
-
-Track input tokens and output tokens.
+Track input and output token usage.
 
 Measure API response latency.
 
-Estimate the API usage cost.
+Calculate estimated API usage costs.
 
-Record successful and failed API requests.
+Log successful and failed API requests.
 
-Store monitoring records in MongoDB.
+Store API monitoring records in MongoDB.
 
+Retrieve and analyze stored records.
 
+Calculate total API usage using MongoDB aggregation.
 
+Visualize monitoring data using Pandas and Matplotlib.
 
-
-Technologies Used
+🛠️ Technologies Used
 
 Python
 
@@ -54,146 +46,197 @@ Matplotlib
 
 Google Colab
 
+📂 Project Structure
 
+Week-3/
 
+│
 
+├── Week3_LLM_Monitoring.ipynb
 
-Installation
+└── README.md
 
-Install the required Python libraries:
+⚙️ Setup and Installation
 
-pip install google-genai pymongo pandas matplotlib
+Step 1: Open the Project
 
+Open the Week-3 practical notebook in Google Colab.
 
+Step 2: Install Required Packages
 
+Execute the following command:
 
+!pip install -q google-genai pymongo pandas matplotlib
 
-Configuration
+Step 3: Configure API Key
 
-The project requires:
+Generate a Google Gemini API key and configure it securely using Google Colab Secrets.
 
-A Google Gemini API key.
+Step 4: Configure MongoDB Connection
 
-A MongoDB Atlas account.
+Create a MongoDB Atlas cluster and configure the MongoDB connection URI.
 
-A MongoDB connection URI.
+Use PyMongo to establish a connection between Python and MongoDB.
 
-A database and collection for storing API usage records.
+Step 5: Import Required Libraries
 
-Configure your API key and MongoDB connection URI securely using Google Colab Secrets or environment variables.
+Import the required Python libraries:
 
-Important: Never upload API keys, MongoDB passwords, or connection strings containing credentials to GitHub.
+from google import genai
+from pymongo import MongoClient
+import pandas as pd
+import matplotlib.pyplot as plt
+import time
 
+Step 6: Connect to Gemini API
 
+Initialize the Google GenAI client and select the Gemini model.
 
+Example API call:
 
+response = client.models.generate_content(
+    model="gemini-3.5-flash",
+    contents="What is Artificial Intelligence?"
+)
 
+print(response.text)
 
-Database Details
+Step 7: Connect to MongoDB
+
+Create a database and collection:
 
 Database Name: llm_monitoring
 
 Collection Name: api_usage
 
+Step 8: Execute the Monitoring Program
 
+Send prompts to the Gemini API and capture the following information:
 
+Input tokens
 
+Output tokens
 
+Total tokens
 
+Response latency
 
-Project Workflow
+Estimated API cost
 
-Install the required Python libraries.
+Request status
+
+Error details
+
+Store the monitoring information in MongoDB.
+
+🧪 Monitoring Experiments
+
+The following experiments are performed in this practical.
+
+Experiment 1: Gemini API Integration
+
+Objective: Connect to the Google Gemini API and generate AI responses using Python.
+
+Experiment 2: Token Usage Monitoring
+
+Objective: Track input tokens, output tokens, and total token consumption for API requests.
+
+Experiment 3: Latency Monitoring
+
+Objective: Measure the time taken by the Gemini API to generate responses.
+
+Experiment 4: Cost Estimation
+
+Objective: Estimate the API usage cost based on token consumption and applicable pricing.
+
+Experiment 5: API Request Logging
+
+Objective: Record both successful and failed API attempts in MongoDB.
+
+Experiment 6: MongoDB Data Retrieval
+
+Objective: Retrieve stored API monitoring records using PyMongo and display them using Pandas.
+
+Experiment 7: Usage Analysis and Visualization
+
+Objective: Calculate total API usage using MongoDB aggregation and analyze monitoring data using Pandas and Matplotlib.
+
+🔍 Observations
+
+API requests can be monitored using token consumption, latency, and estimated cost.
+
+Successful API requests generate response and usage information.
+
+Failed API requests can also be recorded with their error details.
+
+MongoDB successfully stores API monitoring records for future analysis.
+
+Pandas helps display and analyze the stored API records.
+
+MongoDB aggregation helps calculate total API attempts, token usage, average latency, and estimated cost.
+
+Matplotlib helps visualize API monitoring information.
+
+🔄 Execution Workflow
+
+The complete execution process follows these steps:
+
+Install the required Python packages.
 
 Configure the Gemini API key.
 
-Connect to the Gemini API.
+Connect to the Google Gemini API.
+
+Connect to MongoDB Atlas.
 
 Send prompts to the Gemini model.
 
-Capture token usage and response latency.
+Capture input and output token information.
 
-Estimate the API cost.
+Measure API response latency.
 
-Handle successful and failed API requests.
+Estimate API usage cost.
+
+Record successful and failed API requests.
 
 Store monitoring records in MongoDB.
 
 Retrieve records from the MongoDB collection.
 
-Analyze API usage using Pandas.
+Display records using Pandas.
 
-Calculate total API usage using MongoDB aggregation.
+Calculate API usage statistics using MongoDB aggregation.
 
-Generate reports and charts using Matplotlib.
+Generate reports and visualizations using Matplotlib.
 
+📚 Learning Outcomes
 
+After completing this practical, I learned:
 
+The importance of monitoring LLM applications.
 
+How to integrate the Google Gemini API with Python.
 
-Sample Monitoring Output
+How to track input and output token consumption.
 
-The project records information such as:
+How to measure API response latency.
 
-Model: gemini-3.5-flash
+How to estimate API usage costs.
 
-Input Tokens: 4
+How to handle and log successful and failed API requests.
 
-Output Tokens: 571
+How to connect Python applications with MongoDB Atlas.
 
-Latency: 8.544 seconds
+How to store and retrieve API monitoring records using PyMongo.
 
-Estimated Cost: 0.0014287 USD
+How to analyze stored records using Pandas.
 
-Status: success
+How to calculate API usage statistics using MongoDB aggregation.
 
+How to visualize monitoring data using Matplotlib.
 
+✅ Conclusion
 
+This practical helped me understand how to build an LLM monitoring system using Python, Google Gemini API, and MongoDB. The experiment demonstrated how token consumption, response latency, estimated API cost, and request status can be tracked and stored for every API attempt.
 
-
-
-MongoDB Verification
-
-To verify that API records are stored in MongoDB, use MongoDB Shell:
-
-use llm_monitoring
-
-db.api_usage.find().pretty()
-
-To count the stored records:
-
-db.api_usage.countDocuments()
-
-The records can also be viewed through MongoDB Atlas Data Explorer by opening:
-
-llm_monitoring → api_usage
-
-
-
-
-
-Expected Outcomes
-
-Successful integration with the Gemini API.
-
-Monitoring of input and output token usage.
-
-Measurement of API response latency.
-
-Estimation of API request costs.
-
-Logging of successful and failed API requests.
-
-Storage and retrieval of API monitoring records using MongoDB.
-
-Analysis and visualization of API usage data.
-
-
-
-
-
-Conclusion
-
-This practical demonstrates an LLM monitoring system that tracks token consumption, latency, estimated cost, and request status for Gemini API calls. MongoDB provides persistent storage for monitoring records, while Pandas and Matplotlib help analyze and visualize API usage.
-
-The project provides a foundation for understanding API performance, usage monitoring, and cost management in Generative AI applications.
+It also provided practical experience in database integration, API usage analysis, and visualization, highlighting the importance of monitoring and managing Generative AI applications.
