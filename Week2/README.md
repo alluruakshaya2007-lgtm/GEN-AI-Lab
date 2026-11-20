@@ -9,7 +9,8 @@ Google Gemini – A cloud-based LLM accessed through the Gemini API.
 Ollama (Llama 3.2) – A locally running LLM that generates responses without requiring a cloud API.
 
 
-The main objective is to create a flexible and reusable LLM client that can switch between different providers without changing the application logic.
+The main objective 
+is to create a flexible and reusable LLM client that can switch between different providers without changing the application logic.
 
 
 🎯 Objectives
@@ -174,5 +175,7 @@ How to use Abstract Base Classes (ABC) in Python.
 How to implement provider-independent architecture.
 
 How to interact with REST APIs using Python Requests.
+
 How to manage API keys using environment variables.
+
 How to perform unit testing using unittest.
