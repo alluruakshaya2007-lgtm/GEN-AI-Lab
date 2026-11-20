@@ -1,5 +1,7 @@
 Logging Tokens, Latency and Cost for Every Gemini API Call
 
+
+
 Project Description
 
 This project demonstrates how to monitor Large Language Model (LLM) API usage by logging token consumption, response latency, estimated 
@@ -9,6 +11,8 @@ API cost, and request status.
 Google Gemini API is used to generate responses, while MongoDB stores the API usage records for monitoring and analysis.
 
 Python libraries such as Pandas and Matplotlib are used to display, analyze, and visualize the collected monitoring data.
+
+
 
 
 
@@ -27,6 +31,8 @@ Estimate the API usage cost.
 Record successful and failed API requests.
 
 Store monitoring records in MongoDB.
+
+
 
 
 
@@ -50,11 +56,16 @@ Google Colab
 
 
 
+
+
 Installation
 
 Install the required Python libraries:
 
 pip install google-genai pymongo pandas matplotlib
+
+
+
 
 
 Configuration
@@ -75,11 +86,18 @@ Important: Never upload API keys, MongoDB passwords, or connection strings conta
 
 
 
+
+
+
 Database Details
 
 Database Name: llm_monitoring
 
 Collection Name: api_usage
+
+
+
+
 
 
 
@@ -110,6 +128,9 @@ Calculate total API usage using MongoDB aggregation.
 Generate reports and charts using Matplotlib.
 
 
+
+
+
 Sample Monitoring Output
 
 The project records information such as:
@@ -125,6 +146,9 @@ Latency: 8.544 seconds
 Estimated Cost: 0.0014287 USD
 
 Status: success
+
+
+
 
 
 
@@ -146,6 +170,8 @@ llm_monitoring → api_usage
 
 
 
+
+
 Expected Outcomes
 
 Successful integration with the Gemini API.
@@ -161,6 +187,8 @@ Logging of successful and failed API requests.
 Storage and retrieval of API monitoring records using MongoDB.
 
 Analysis and visualization of API usage data.
+
+
 
 
 
