@@ -1,10 +1,10 @@
-WEEK 5 – Token Economics
+**WEEK 5 – Token Economics**
 
-1. Aim
+**1. Aim**
 
 To estimate token consumption, API costs, and rate limits of an LLM-powered feature using Python before implementation.
 
-2. Technologies Used
+**2. Technologies Used**
 
 Python
 
@@ -15,11 +15,11 @@ Dataclasses
 VS Code
 
 
-4. Installation
+**3. Installation**
 
 pip install python-dotenv
 
-5. Project Structure
+**4. Project Structure**
 
 Week-5/
 ├── .env
@@ -27,7 +27,7 @@ Week-5/
 ├── test_budget.py
 └── requirements.txt
 
-6. Implementation Steps
+**5. Implementation Steps**
 
 Create a .env file to store configuration values.
 
@@ -45,7 +45,7 @@ Display the final budget report.
 
 Perform automated testing and what-if analysis.
 
-7. Execution
+**6. Execution**
 
 Run the main program:
 
@@ -55,7 +55,7 @@ Run automated tests:
 
 python -m unittest test_budget.py -v
 
-8. Sample Output
+**7. Sample Output**
 
 Input tokens/day:  2,400,000
 Output tokens/day: 600,000
@@ -72,7 +72,7 @@ TPM capacity: PASS
 Daily budget: PASS
 Monthly budget: REVIEW
 
-9. Observations
+**8. Observations**
 
 Increasing requests increases token consumption and cost.
 
@@ -84,6 +84,6 @@ Safety margins help manage unexpected usage.
 
 Budget checks identify possible cost overruns.
 
-10. Result
+**9. Result**
 
 Successfully implemented a Python-based Token Economics Budget Planner to calculate token consumption, estimate API costs, check rate limits, and evaluate budget limits. All four automated tests passed successfully.
