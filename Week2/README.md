@@ -38,12 +38,6 @@ Ollama
 
 Llama 3.2
 
-Requests
-
-Python-dotenv
-
-Unittest
-
 Visual Studio Code
 
 📂 Project Structure
