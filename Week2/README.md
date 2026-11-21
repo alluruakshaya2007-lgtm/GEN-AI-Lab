@@ -1,175 +1,91 @@
-📌 Project Overview
+# WEEK 2 – Provider-Agnostic LLM Client
 
-This project implements a Provider-Agnostic Large Language Model (LLM) Client that allows users to interact with different Large Language Model providers through a single common interface.
+## 1. Aim
+To build a provider-agnostic LLM client that uses one common interface to communicate with Gemini API and a locally running Ollama model.
 
-The application supports two LLM providers:
+## 2. Technologies Used
+- Python
+- Google Gemini API
+- Ollama
+- Llama 3.2
+- Requests
+- Python-dotenv
 
-Google Gemini – A cloud-based LLM accessed through the Gemini API.
-
-Ollama (Llama 3.2) – A locally running LLM that generates responses without requiring a cloud API.
-
-
-The main objective 
-is to create a flexible and reusable LLM client that can switch between different providers without changing the application logic.
-
-
-🎯 Objectives
-
-Build a common interface for multiple LLM providers.
-
-Integrate Google Gemini using its API.
-
-Integrate Ollama with the Llama 3.2 model.
-
-Implement provider selection at runtime.
-
-Use environment variables to securely manage API keys.
-
-Perform unit testing using Python's unittest framework.
-
-
-
-🛠️ Technologies Used
-Python
-
-Google Gemini API
-
-Ollama
-
-Llama 3.2
-
-Visual Studio Code
-
-📂 Project Structure
-
-Week-2/
-│
-├── .env
-├── llm_client.py
+## 3. Folder Structure
+WEEK2/
 ├── main.py
+├── llm_client.py
 ├── test_client.py
 ├── requirements.txt
-└── README.md
+├── .env
+└── .gitignore
 
+## 4. Installation
 
-⚙️ Installation and Setup
+Activate the shared virtual environment:
 
-1. Install Python
+cd C:\GENAI
+.\venv\Scripts\Activate.ps1
 
-Download and install Python from:
+Navigate to Week 2:
 
-https://www.python.org/downloads/
+cd PRACTICAL\WEEK2
 
-Verify the installation:
-
-python --version
-
-2. Install Ollama
-
-Download Ollama from:
-
-https://ollama.com/download
-
-Install Ollama on your local system.
-
-Verify the installation:
-
-ollama --version
-
-3. Download Llama 3.2 Model
-
-Open PowerShell and execute:
-
-ollama pull llama3.2
-
-This downloads the Llama 3.2 model to your local system.
-
-4. Create a Project Folder
-
-Create a folder named Week-2 in VS Code and add the required Python files.
-
-5. Install Dependencies
-
-Open the terminal inside the project folder and execute:
+Install dependencies:
 
 pip install -r requirements.txt
 
-6. Configure Environment Variables
+## 5. Configuration
 
-Create a .env file and add your Gemini API key:
+Add your Gemini API key to the .env file:
 
-GEMINI_API_KEY=your_api_key_here
+GEMINI_API_KEY=your_api_key
 
-Get your API key from:
+Never upload your actual API key to GitHub.
 
-https://aistudio.google.com/apikey
+Install and download Ollama's model:
 
-Note: Never upload your actual API key to GitHub. Add .env to .gitignore.
+ollama pull llama3.2
 
+## 6. Implementation Steps
 
-▶️ Execution
+1. Create a common LLM provider interface.
+2. Implement GeminiProvider.
+3. Implement OllamaProvider.
+4. Create the common LLMClient.
+5. Test the client using a fake provider.
 
-Run the application using:
+## 7. Execution
+
+Run:
 
 python main.py
 
-Select your preferred LLM provider:
+Choose your provider:
 
-Choose provider (gemini/ollama):
+gemini
 
-Enter gemini to use Google Gemini or ollama to use the local Llama 3.2 model.
+or
 
-Enter a question when prompted:
+ollama
 
-Enter your question: Explain Artificial Intelligence
+Enter your question.
 
-LLM Response:
+## 8. Sample Input
 
-[Generated response from the selected LLM]
+Explain Machine Learning in simple words.
 
+## 9. Testing
 
-🧪 Testing
+Run:
 
-The project includes unit testing using Python's unittest framework.
+python test_client.py
 
-Run the test file:
+Expected result:
 
-python -m unittest test_client.py
+Ran 1 test
+OK
 
-Alternatively, use pytest:
+## 10. Result
 
-python -m pytest
-
-The test uses a FakeProvider to verify that the common LLM client correctly generates and returns responses.
-
-
-✨ Key Features
-
-Provider Independence: Uses one common interface for different LLM providers.
-
-Cloud Integration: Connects to Google Gemini through its API.
-
-Local LLM Integration: Runs Llama 3.2 using Ollama.
-
-Runtime Selection: Allows users to choose the provider while executing the application.
-
-Reusable Architecture: Makes it easier to add additional LLM providers.
-
-Unit Testing: Verifies the client functionality using a fake provider.
-
-
-📚 Learning Outcomes
-
-Through this project, I learned:
-
-How to integrate cloud-based and locally hosted LLMs.
-
-How to use Abstract Base Classes (ABC) in Python.
-
-How to implement provider-independent architecture.
-
-How to interact with REST APIs using Python Requests.
-
-How to manage API keys using environment variables.
-
-How to perform unit testing using unittest.
+Successfully implemented a provider-agnostic LLM client supporting both Gemini API and the local Ollama model.
