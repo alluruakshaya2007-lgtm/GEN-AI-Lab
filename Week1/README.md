@@ -24,11 +24,7 @@ Experiment with different prompts and understand prompt-based interactions.
 
 Python
 
-Google Colab
-
 Google Gemini API
-
-Google GenAI SDK
 
 Google AI Studio
 
