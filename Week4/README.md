@@ -1,96 +1,72 @@
-📌 Project Overview
+WEEK 4 – Tokenizer Comparison Lab
 
-This project demonstrates how different tokenization techniques used in Large Language Models (LLMs) process text in multiple languages.
+1. Aim
 
-The objective of this practical is to compare three tokenization approaches: Byte Pair Encoding (BPE), WordPiece, and SentencePiece using Python and the Hugging Face Transformers library.
+To compare different tokenization techniques used in Large Language Models (LLMs) by processing English, Telugu, and Hindi sentences using BPE, WordPiece, and SentencePiece-based tokenizers.
 
-The experiment analyzes how English, Telugu, and Hindi sentences are divided into tokens and converted into token IDs.
-
-
-
-🎯 Objectives
-
-Understand the concept of tokenization in Large Language Models.
-
-Explore different tokenization techniques.
-
-Compare BPE, WordPiece, and SentencePiece tokenizers.
-
-Perform tokenization using Python and Hugging Face Transformers.
-
-Analyze token counts for English, Telugu, and Hindi.
-
-Understand how tokenization differs across languages.
-
-
-
-🛠️ Technologies Used
+2. Technologies Used
 
 Python
 
-Hugging Face Transformers
-
-SentencePiece
-
 VS Code
 
-PowerShell
+GPT-2
 
+3. Tokenizers Used
 
+BPE: GPT-2 (gpt2)
 
-📂 Project Structure
+WordPiece: Multilingual BERT (bert-base-multilingual-cased)
 
-Week-4/
-│
-├── tokenizer_comparison.py
-├── requirements.txt
-└── README.md
+SentencePiece: XLM-R (xlm-roberta-base)
 
+4. Installation
 
+Install the required packages:
 
-⚙️ Setup and Installation
+pip install transformers sentencepiece
 
-Step 1: Open the Project
-
-Open the Week-4 project folder in Visual Studio Code.
-
-Step 2: Activate the Virtual Environment
-
-Open the VS Code terminal and execute:
-
-..\.MyEnv\Scripts\Activate.ps1
-
-Step 3: Install Required Packages
-
-Execute the following command:
+Or execute:
 
 pip install -r requirements.txt
 
-The requirements.txt file contains:
+5. Input Languages
 
-transformers
+The experiment uses three languages:
 
-sentencepiece
+English
 
-Step 4: Import Required Library
+Telugu
 
-Import the AutoTokenizer class:
+Hindi
 
-from transformers import AutoTokenizer
+6. Implementation Steps
 
-Step 5: Load Different Tokenizers
+Import the AutoTokenizer class from Transformers.
 
-Three tokenizers are used in this practical:
+Load the GPT-2 tokenizer.
 
-BPE – GPT-2 (gpt2)
+Load the Multilingual BERT tokenizer.
 
-WordPiece – Multilingual BERT (bert-base-multilingual-cased)
+Load the XLM-R tokenizer.
 
-SentencePiece – XLM-R (xlm-roberta-base)
+Provide sample sentences in English, Telugu, and Hindi.
 
-Step 6: Provide Input Sentences
+Convert sentences into tokens.
 
-The following sentences are used for tokenization:
+Generate corresponding token IDs.
+
+Calculate the total number of tokens.
+
+Compare the results of all three tokenizers.
+
+7. Execution
+
+Open the Week-4 project folder in VS Code and execute:
+
+python tokenizer_comparison.py
+
+8. Sample Input
 
 English:
 
@@ -104,87 +80,52 @@ Hindi:
 
 कृत्रिम बुद्धिमत्ता दुनिया को बदल रही है।
 
-Step 7: Execute the Python Program
+9. Sample Output
 
-Run the following command in the terminal:
+Language
 
-python tokenizer_comparison.py
+BPE (GPT-2)
 
-The program displays the tokens, token IDs, and total token count for each tokenizer and language.
+WordPiece (BERT)
 
+SentencePiece (XLM-R)
 
-🧪 Three Tokenization Experiments
+English
 
-The following experiments compare how different tokenizers process sentences in multiple languages.
+8
 
-Experiment 1: BPE – GPT-2
+10
 
-Tokenizer: GPT-2
+10
 
-Objective: Understand how Byte Pair Encoding divides text into smaller subword units.
+Telugu
 
-Experiment 2: WordPiece – Multilingual BERT
+112
 
-Tokenizer: Multilingual BERT
+18
 
-Objective: Understand how WordPiece tokenization processes English and multilingual text.
+14
 
-Experiment 3: SentencePiece – XLM-R
+Hindi
 
-Tokenizer: XLM-R
+68
 
-Objective: Understand how SentencePiece-based tokenization handles different languages.
+17
 
+14
 
+Sample token counts from the recorded practical execution, including special tokens.
 
-🔍 Observations
+10. Observations
 
 GPT-2 generated fewer tokens for the given English sentence.
 
-GPT-2 generated significantly more tokens for Telugu and Hindi.
+GPT-2 generated more tokens for Telugu and Hindi.
 
-Multilingual BERT and XLM-R handled the given Telugu and Hindi sentences with fewer tokens.
+Multilingual BERT and XLM-R generated fewer tokens for the given Telugu and Hindi sentences.
 
-Different tokenizers produce different token counts because of their vocabularies and tokenization methods.
+Different tokenizers produce different token counts depending on their vocabulary and tokenization approach.
 
-Token count can affect the input length and token usage of LLM applications.
+11. Result
 
-🔄 Execution Workflow
-
-The complete execution process follows these steps:
-
-Import the required Python library.
-
-Load the three pretrained tokenizers.
-
-Provide English, Telugu, and Hindi sentences.
-
-Pass each sentence to the tokenizers.
-
-Generate tokens and corresponding token IDs.
-
-Calculate the total number of tokens.
-
-Compare the results across different tokenizers.
-
-📚 Learning Outcomes
-
-After completing this practical, I learned:
-
-The importance of tokenization in Large Language Models.
-
-How BPE, WordPiece, and SentencePiece-based tokenizers work.
-
-How to use pretrained tokenizers through Hugging Face Transformers.
-
-How text is converted into tokens and token IDs.
-
-How tokenization differs between English and Indian languages.
-
-How token counts influence text processing in LLM applications.
-
-How to compare different tokenization techniques using Python.
-
-✅ Conclusion
-
-This practical helped me understand and compare three different tokenization approaches. The experiment demonstrated that tokenization varies across languages and models, highlighting the importance of choosing suitable tokenizers for multilingual LLM applications.
+Successfully implemented and compared BPE, WordPiece, and SentencePiece-based tokenizers using Python and Hugging Face Transformers. Observed how different tokenization techniques process English, Telugu, and Hindi text and produce different token counts.
