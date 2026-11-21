@@ -34,15 +34,7 @@ Python
 
 Google Gemini API
 
-Google GenAI SDK
-
 MongoDB Atlas
-
-PyMongo
-
-Pandas
-
-Matplotlib
 
 Google Colab
 
@@ -78,30 +70,11 @@ Create a MongoDB Atlas cluster and configure the MongoDB connection URI.
 
 Use PyMongo to establish a connection between Python and MongoDB.
 
-Step 5: Import Required Libraries
-
-Import the required Python libraries:
-
-from google import genai
-from pymongo import MongoClient
-import pandas as pd
-import matplotlib.pyplot as plt
-import time
-
-Step 6: Connect to Gemini API
+Step 5: Connect to Gemini API
 
 Initialize the Google GenAI client and select the Gemini model.
 
-Example API call:
-
-response = client.models.generate_content(
-    model="gemini-3.5-flash",
-    contents="What is Artificial Intelligence?"
-)
-
-print(response.text)
-
-Step 7: Connect to MongoDB
+Step 6: Connect to MongoDB
 
 Create a database and collection:
 
@@ -109,7 +82,7 @@ Database Name: llm_monitoring
 
 Collection Name: api_usage
 
-Step 8: Execute the Monitoring Program
+Step 7: Execute the Monitoring Program
 
 Send prompts to the Gemini API and capture the following information:
 
